@@ -1,0 +1,60 @@
+<main>
+  <section class="d-none d-sm-block">
+    <div class="card">
+      <div class="card-body d-flex align-items-center">
+        <i class="fas fa-tasks mr-3"></i>
+        <h1 class="card-title">
+          Diligencia Actualizada del Tributo Inmobiliario
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid my-3">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center">
+          👋 Hola, ¡Bienvenido al Sistema DATI!
+        </h2>
+        <a
+          (click)="opcion = 'disabled'"
+          class="btn btn-success btn-block col-6 mx-auto {{ opcion }}"
+          >Seleccionar Análisis</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid my-4" *ngIf="opcion === 'disabled'">
+    <div class="card">
+      <div
+        class="card-header bg-white d-flex justify-content-between align-items-center"
+      >
+        <h6 class="card-title">
+          Seleccione el Tipo de Análisis que desea Realizar
+        </h6>
+
+        <a href="/form" class="btn btn-warning text-white {{ select }}"
+          >Siguiente</a
+        >
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label class="label-input" for="exampleFormControlSelect1">Tipos de Análisis</label>
+            <div class="input-container">
+              <select
+                (change)="select = ''"
+                class="form-control h-50"
+                id="exampleFormControlSelect1"
+              >
+                <option value></option>
+                <option value="1">Aplicación y Desafectación</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

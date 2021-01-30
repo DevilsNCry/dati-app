@@ -1,0 +1,113 @@
+<app-header></app-header>
+
+<section>
+  <div class="card">
+    <div class="card-body form-title">
+      <h3 class="card-title">Seleccionar Inmueble</h3>
+
+      <a href="/list" class="btn btn-primary">Siguiente</a>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid my-4">
+  <div class="card">
+    <div class="card-header bg-white">
+      <h6 class="card-title">Seleccione el Inmueble que desea Analizar</h6>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio1"
+              name="customRadio"
+              class="custom-control-input"
+            />
+            <label
+              class="custom-control-label"
+              for="customRadio1"
+              (click)="opcion = 1"
+              >No. de Finca: 1, Código de Ubicación: 1</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group" *ngIf="opcion === 1">
+          <p>
+            La finca seleccionada goza actualmente de algún tipo de exoneración
+            en el pago del impuesto de inmuebles?
+          </p>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio2"
+              name="customRadio2"
+              class="custom-control-input"
+            />
+            <label
+              class="custom-control-label"
+              for="customRadio2"
+              (click)="opcion2 = 1"
+              >Si</label
+            >
+          </div>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio3"
+              name="customRadio2"
+              class="custom-control-input"
+            />
+            <label
+              class="custom-control-label"
+              for="customRadio3"
+              (click)="opcion2 = 2"
+              >No</label
+            >
+          </div>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio4"
+              name="customRadio2"
+              class="custom-control-input"
+            />
+            <label
+              class="custom-control-label"
+              for="customRadio4"
+              (click)="opcion2 = 2"
+              >No se</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group" *ngIf="opcion2 === 2">
+          <p>
+            Desea realizar el análisis para validar si cumple con alguno de los
+            beneficios?
+          </p>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio5"
+              name="customRadio3"
+              class="custom-control-input"
+            />
+            <label class="custom-control-label" for="customRadio5">Si</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio6"
+              name="customRadio3"
+              class="custom-control-input"
+            />
+            <label class="custom-control-label" for="customRadio6">No</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
